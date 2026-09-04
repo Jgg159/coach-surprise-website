@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Ione Mam 🥋❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #ff4f9a;
+    --purple: #8b5cf6;
+    --blue: #5b8cff;
+    --gold: #ffd166;
+    --white: #ffffff;
+    --muted: #aaa7b5;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(255, 79, 154, .25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 90%,
+            rgba(139, 92, 246, .25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #07070c,
+            #171123,
+            #090910
+        );
+}
+
+/* =========================
+   CINEMATIC INTRO
+========================= */
+
+.intro {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(139,92,246,.18),
+            transparent 35%
+        ),
+        #050509;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+.intro.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.intro-content {
+    text-align: center;
+    animation: introIn 1.5s ease forwards;
+}
+
+@keyframes introIn {
+    from {
+        opacity: 0;
+        transform: scale(.7) translateY(40px);
+        filter: blur(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+.dojo-symbol {
+    font-size: 105px;
+
+    filter:
+        drop-shadow(
+            0 0 35px
+            rgba(255,79,154,.35)
+        );
+
+    animation:
+        dojoFloat 2s ease-in-out infinite;
+}
+
+@keyframes dojoFloat {
+    0%,100% {
+        transform: translateY(0) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(4deg);
+    }
+}
+
+.intro-title {
+    margin-top: 20px;
+
+    font-size:
+        clamp(35px, 9vw, 62px);
+
+    font-weight: 950;
+
+    letter-spacing: -2px;
+}
+
+.intro-title span {
+    background:
+        linear-gradient(
+            90deg,
+            #ff6cab,
+            #b184ff,
+            #75a7ff
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.intro-subtitle {
+    margin-top: 14px;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.intro-line {
+    width: 100px;
+    height: 2px;
+
+    margin: 30px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--pink),
+            var(--purple),
+            transparent
+        );
+
+    animation:
+        linePulse 1.5s infinite;
+}
+
+@keyframes linePulse {
+    0%,100% {
+        opacity: .35;
+        transform: scaleX(.6);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.intro-small {
+    color: rgba(255,255,255,.35);
+    font-size: 12px;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.stars {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+
+    opacity: .12;
+}
+
+.orb {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(85px);
+
+    opacity: .25;
+
+    animation:
+        orbFloat
+        10s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+.orb.one {
+    width: 320px;
+    height: 320px;
+
+    background: var(--pink);
+
+    left: -150px;
+    top: -130px;
+}
+
+.orb.two {
+    width: 360px;
+    height: 360px;
+
+    background: var(--purple);
+
+    right: -160px;
+    bottom: -150px;
+
+    animation-delay: -3s;
+}
+
+.orb.three {
+    width: 230px;
+    height: 230px;
+
+    background: var(--blue);
+
+    left: 45%;
+    top: 35%;
+
+    opacity: .1;
+
+    animation-delay: -5s;
+}
+
+@keyframes orbFloat {
+    from {
+        transform: translate(0,0) scale(1);
+    }
+
+    to {
+        transform:
+            translate(60px,-40px)
+            scale(1.15);
+    }
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+    right: 20px;
+
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    color: rgba(255,255,255,.55);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.music-button {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.07);
+
+    cursor: pointer;
+
+    backdrop-filter: blur(12px);
+
+    transition: .25s;
+}
+
+.music-button:hover {
+    transform: scale(1.08);
+
+    background:
+        rgba(255,255,255,.14);
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.app {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+
+    width: min(94vw, 540px);
+
+    min-height: 700px;
+
+    padding: 40px 28px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 38px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.11),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.5),
+        inset 0 1px 0
+        rgba(255,255,255,.1);
+
+    backdrop-filter: blur(25px);
+
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,79,154,.08);
+
+    top: -150px;
+    right: -120px;
+}
+
+.card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139,92,246,.08);
+
+    bottom: -150px;
+    left: -110px;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress {
+    position: absolute;
+
+    top: 18px;
+    left: 28px;
+    right: 28px;
+
+    height: 3px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--pink),
+            var(--purple),
+            var(--blue)
+        );
+
+    transition:
+        width .8s ease;
+}
+
+/* =========================
+   SCREENS
+========================= */
+
+.screen {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    min-height: 620px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    animation:
+        screenIn
+        .75s
+        cubic-bezier(.2,.8,.2,1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes screenIn {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(.96);
+
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter: blur(0);
+    }
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.mini-label {
+    color: var(--pink);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 17px;
+}
+
+h1 {
+    font-size:
+        clamp(38px, 10vw, 58px);
+
+    line-height: .98;
+
+    font-weight: 950;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size:
+        clamp(28px, 7vw, 42px);
+
+    line-height: 1.1;
+
+    font-weight: 900;
+
+    margin-bottom: 18px;
+}
+
+.gradient {
+    background:
+        linear-gradient(
+            90deg,
+            #ff6cab,
+            #b184ff,
+            #78a8ff
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.description {
+    max-width: 400px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    margin-bottom: 30px;
+}
+
+/* =========================
+   ICONS
+========================= */
+
+.hero-icon {
+    font-size: 95px;
+
+    margin-bottom: 25px;
+
+    animation:
+        heroFloat
+        2.5s
+        ease-in-out
+        infinite;
+
+    filter:
+        drop-shadow(
+            0 15px 30px
+            rgba(255,79,154,.25)
+        );
+}
+
+@keyframes heroFloat {
+    0%,100% {
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotate(3deg);
+    }
+}
+
+.question-icon {
+    font-size: 88px;
+
+    margin-bottom: 20px;
+
+    animation:
+        questionMove
+        1.8s
+        ease-in-out
+        infinite;
+}
+
+@keyframes questionMove {
+    0%,100% {
+        transform:
+            rotate(-7deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(7deg)
+            translateY(-12px);
+    }
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
+button {
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 850;
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 999px;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+.primary {
+    padding: 16px 29px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--purple)
+        );
+
+    box-shadow:
+        0 15px 35px
+        rgba(255,79,154,.25);
+}
+
+.primary:hover {
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 20px 45px
+        rgba(255,79,154,.38);
+}
+
+.secondary {
+    padding: 16px 29px;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+}
+
+.secondary:hover {
+    background:
+        rgba(255,255,255,.14);
+}
+
+.tiny {
+    margin-top: 20px;
+
+    color:
+        rgba(255,255,255,.32);
+
+    font-size: 12px;
+}
+
+/* =========================
+   QUESTION
+========================= */
+
+.coach-name {
+    color:
+        rgba(255,255,255,.7);
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+/* =========================
+   YES SCREEN
+========================= */
+
+.laugh-icon {
+    font-size: 100px;
+
+    margin-bottom: 18px;
+
+    animation:
+        laugh
+        .9s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+@keyframes laugh {
+    from {
+        transform:
+            rotate(-6deg)
+            scale(1);
+    }
+
+    to {
+        transform:
+            rotate(6deg)
+            scale(1.08);
+    }
+}
+
+.yes-badge {
+    display: inline-flex;
+
+    padding: 9px 15px;
+
+    margin-bottom: 18px;
+
+    border-radius: 999px;
+
+    color: var(--gold);
+
+    background:
+        rgba(255,209,102,.12);
+
+    border:
+        1px solid
+        rgba(255,209,102,.2);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+/* =========================
+   PHOTO PLACEHOLDER
+========================= */
+
+.photo-placeholder {
+    width: 125px;
+    height: 125px;
+
+    margin-bottom: 22px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,79,154,.15),
+            rgba(139,92,246,.15)
+        );
+
+    border:
+        2px solid
+        rgba(255,255,255,.15);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.3);
+
+    font-size: 50px;
+
+    overflow: hidden;
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: none;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final-icon {
+    font-size: 82px;
+
+    margin-bottom: 12px;
+
+    animation:
+        finalFloat
+        2s
+        ease-in-out
+        infinite;
+}
+
+@keyframes finalFloat {
+    0%,100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            scale(1.05);
+    }
+}
+
+.final-message {
+    max-width: 410px;
+
+    padding: 20px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+.signature {
+    margin-top: 20px;
+
+    font-size: 16px;
+
+    font-weight: 850;
+}
+
+.signature span {
+    color: var(--pink);
+}
+
+.replay {
+    margin-top: 18px;
+
+    padding: 11px 19px;
+
+    color:
+        rgba(255,255,255,.7);
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+}
+
+/* =========================
+   KICK
+========================= */
+
+.kick {
+    position: fixed;
+
+    z-index: 800;
+
+    left: -150px;
+    top: 50%;
+
+    font-size: 100px;
+
+    pointer-events: none;
+
+    animation:
+        kickAcross
+        1.2s
+        cubic-bezier(.2,.8,.2,1)
+        forwards;
+}
+
+@keyframes kickAcross {
+    0% {
+        left: -150px;
+        opacity: 0;
+
+        transform:
+            scale(.6)
+            rotate(-15deg);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    100% {
+        left: calc(100% + 150px);
+
+        opacity: 0;
+
+        transform:
+            scale(1.4)
+            rotate(15deg);
+    }
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+    position: fixed;
+
+    top: -30px;
+
+    z-index: 900;
+
+    pointer-events: none;
+
+    animation:
+        confettiFall
+        linear
+        forwards;
+}
+
+@keyframes confettiFall {
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translateY(115vh)
+            rotate(900deg);
+
+        opacity: 0;
+    }
+}
+
+/* =========================
+   HEARTS
+========================= */
+
+.heart {
+    position: fixed;
+
+    bottom: -40px;
+
+    z-index: 500;
+
+    pointer-events: none;
+
+    animation:
+        heartUp
+        linear
+        forwards;
+}
+
+@keyframes heartUp {
+    0% {
+        transform:
+            translateY(0)
+            scale(.6);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .9;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            scale(1.3)
+            rotate(30deg);
+
+        opacity: 0;
+    }
+}
+
+/* =========================
+   BURST
+========================= */
+
+.burst {
+    position: fixed;
+
+    z-index: 1000;
+
+    left: 50%;
+    top: 50%;
+
+    font-size: 28px;
+
+    pointer-events: none;
+
+    animation:
+        burst
+        1.4s
+        ease-out
+        forwards;
+}
+
+@keyframes burst {
+    from {
+        opacity: 1;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.2);
+    }
+
+    to {
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            scale(1.5)
+            rotate(30deg);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .app {
+        padding: 12px;
+    }
+
+    .card {
+        min-height: 680px;
+
+        padding:
+            35px 20px;
+
+        border-radius: 30px;
+    }
+
+    .screen {
+        min-height: 610px;
+    }
+
+    .hero-icon,
+    .question-icon {
+        font-size: 72px;
+    }
+
+    .laugh-icon {
+        font-size: 78px;
+    }
+
+    .final-icon {
+        font-size: 70px;
+    }
+
+    .photo-placeholder {
+        width: 105px;
+        height: 105px;
+
+        font-size: 42px;
+    }
+
+    .description {
+        max-width: 330px;
+
+        font-size: 14px;
+    }
+
+    .kick {
+        font-size: 75px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     CINEMATIC INTRO
+========================= -->
+
+<div class="intro" id="intro">
+
+```
+<div class="intro-content">
+
+    <div class="dojo-symbol">
+        🥋
+    </div>
+
+    <div class="intro-title">
+        A Special Message<br>
+        <span>For Ione Mam</span>
+    </div>
+
+    <div class="intro-line"></div>
+
+    <div class="intro-subtitle">
+        Teacher's Day • 2026
+    </div>
+
+    <div class="intro-small">
+        Get ready...
+    </div>
+
+</div>
+```
+
+</div>
+
+<!-- =========================
+     BACKGROUND
+========================= -->
+
+<div class="background">
+
+```
+<div class="stars"></div>
+
+<div class="orb one"></div>
+<div class="orb two"></div>
+<div class="orb three"></div>
+```
+
+</div>
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="topbar">
+
+```
+<div class="brand">
+    KSHITIJ • TKD
+</div>
+
+<button
+    class="music-button"
+    id="musicButton"
+    aria-label="Toggle music"
+>
+    ♪
+</button>
+```
+
+</div>
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="app">
+
+<div class="card">
+
+```
+<div class="progress">
+
+    <div
+        class="progress-bar"
+        id="progressBar"
+    ></div>
+
+</div>
+
+
+<!-- SCREEN 1 -->
+
+<section
+    class="screen"
+    id="screen1"
+>
+
+    <div class="hero-icon">
+        🥋
+    </div>
+
+    <div class="mini-label">
+        Teacher's Day • 2026
+    </div>
+
+    <h1>
+        Coach, I have<br>
+        <span class="gradient">
+            a question...
+        </span>
+    </h1>
+
+    <p class="description">
+        Don't worry, it's not about
+        push-ups, kicks or extra training. 😂
+
+        <br><br>
+
+        It's something much more important.
+    </p>
+
+    <button
+        class="primary"
+        id="startButton"
+    >
+        I'm listening 👀
+    </button>
+
+    <div class="tiny">
+        Tap to continue
+    </div>
+
+</section>
+
+
+<!-- SCREEN 2 -->
+
+<section
+    class="screen hidden"
+    id="screen2"
+>
+
+    <div class="question-icon">
+        ❓
+    </div>
+
+    <div class="coach-name">
+        Ione Mam...
+    </div>
+
+    <h2>
+        Will you be<br>
+        <span class="gradient">
+            my Teacher?
+        </span>
+        ❤️
+    </h2>
+
+    <p class="description">
+        Not only in Taekwondo,
+        but in the lessons that make us
+        stronger, more disciplined and
+        better in life.
+    </p>
+
+    <div class="buttons">
+
+        <button
+            class="primary"
+            id="yesButton"
+        >
+            Yes ❤️
+        </button>
+
+        <button
+            class="secondary"
+            id="noButton"
+        >
+            Obviously 😎
+        </button>
+
+    </div>
+
+    <div
+        class="tiny"
+        id="hint"
+    >
+        Think carefully... 🥋
+    </div>
+
+</section>
+
+
+<!-- SCREEN 3 -->
+
+<section
+    class="screen hidden"
+    id="screen3"
+>
+
+    <div class="laugh-icon">
+        😂
+    </div>
+
+    <div class="yes-badge">
+        CORRECT ANSWER ✓
+    </div>
+
+    <h1>
+        I KNEW IT!
+    </h1>
+
+    <h2>
+        You said
+        <span class="gradient">
+            YES!
+        </span>
+        ❤️
+    </h2>
+
+    <p class="description">
+        I knew you wouldn't say no.
+        You're too awesome for that,
+        Coach! 😎🥋
+    </p>
+
+</section>
+
+
+<!-- SCREEN 4 -->
+
+<section
+    class="screen hidden"
+    id="screen4"
+>
+
+    <!-- PHOTO PLACEHOLDER -->
+
+    <div class="photo-placeholder">
+
+        <!-- Later we can put:
+             <img src="ione-mam.jpg">
+        -->
+
+        <span id="photoEmoji">
+            📸
+        </span>
+
+    </div>
+
+    <div class="final-icon">
+        🥋❤️
+    </div>
+
+    <div class="mini-label">
+        A message from Kshitij
+    </div>
+
+    <h1>
+        Happy<br>
+        <span class="gradient">
+            Teacher's Day!
+        </span>
+    </h1>
+
+    <h2>
+        Ione Mam ❤️
+    </h2>
+
+    <div class="final-message">
+
+        Thank you for making us stronger—
+        not just in Taekwondo, but in life.
+
+        <br><br>
+
+        Thank you for your patience,
+        guidance, discipline and
+        encouragement.
+
+        <br><br>
+
+        Every training session,
+        every correction and every lesson
+        has helped us become better.
+
+    </div>
+
+    <div class="signature">
+
+        With respect & gratitude,<br>
+
+        <span>
+            Kshitij 🥋
+        </span>
+
+    </div>
+
+    <button
+        class="replay"
+        id="replayButton"
+    >
+        ↻ Watch Again
+    </button>
+
+</section>
+```
+
+</div>
+
+</main>
+
+<script>
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const intro =
+    document.getElementById("intro");
+
+const screen1 =
+    document.getElementById("screen1");
+
+const screen2 =
+    document.getElementById("screen2");
+
+const screen3 =
+    document.getElementById("screen3");
+
+const screen4 =
+    document.getElementById("screen4");
+
+const startButton =
+    document.getElementById("startButton");
+
+const yesButton =
+    document.getElementById("yesButton");
+
+const noButton =
+    document.getElementById("noButton");
+
+const replayButton =
+    document.getElementById("replayButton");
+
+const progressBar =
+    document.getElementById("progressBar");
+
+const hint =
+    document.getElementById("hint");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+
+const screens = [
+    screen1,
+    screen2,
+    screen3,
+    screen4
+];
+
+
+let noAttempts = 0;
+
+let audioContext = null;
+
+let musicOn = false;
+
+let musicTimer = null;
+
+
+/* =========================
+   INTRO
+========================= */
+
+window.addEventListener(
+    "load",
+    () => {
+
+        setTimeout(
+            () => {
+
+                intro.classList.add("hide");
+
+                progressBar.style.width =
+                    "25%";
+
+            },
+            3000
+        );
+
+    }
+);
+
+
+/* =========================
+   SCREEN CONTROL
+========================= */
+
+function showScreen(number) {
+
+    screens.forEach(
+        screen => {
+
+            screen.classList.add(
+                "hidden"
+            );
+
+        }
+    );
+
+    screens[number - 1]
+        .classList.remove("hidden");
+
+    progressBar.style.width =
+        `${number * 25}%`;
+}
+
+
+/* =========================
+   START
+========================= */
+
+startButton.addEventListener(
+    "click",
+    () => {
+
+        createKick();
+
+        playTone(
+            440,
+            .15
+        );
+
+        setTimeout(
+            () => {
+
+                showScreen(2);
+
+            },
+            700
+        );
+
+    }
+);
+
+
+/* =========================
+   YES
+========================= */
+
+yesButton.addEventListener(
+    "click",
+    () => {
+
+        createKick();
+
+        playCelebration();
+
+        showScreen(3);
+
+        setTimeout(
+            () => {
+
+                showScreen(4);
+
+                createConfetti();
+
+                createBurst();
+
+                createHearts();
+
+            },
+            2600
+        );
+
+    }
+);
+
+
+/* =========================
+   FUNNY NO BUTTON
+========================= */
+
+const noMessages = [
+
+    "WAIT 😭",
+
+    "ARE YOU SURE? 🥺",
+
+    "REALLY?! 😭",
+
+    "NICE TRY 😂",
+
+    "NO ESCAPE! 🥋",
+
+    "JUST SAY YES ❤️",
+
+    "YOU KNOW THE ANSWER 😎"
+
+];
+
+
+function moveNoButton() {
+
+    noAttempts++;
+
+    const index =
+        Math.min(
+            noAttempts - 1,
+            noMessages.length - 1
+        );
+
+    noButton.textContent =
+        noMessages[index];
+
+    const x =
+        Math.random() * 180 - 90;
+
+    const y =
+        Math.random() * 130 - 65;
+
+    const rotation =
+        Math.random() * 16 - 8;
+
+    noButton.style.transform =
+        `
+        translate(${x}px, ${y}px)
+        rotate(${rotation}deg)
+        `;
+
+    hint.textContent =
+        noAttempts >= 4
+            ? "Okay okay... just press YES 😂❤️"
+            : "That button seems nervous... 👀";
+}
+
+
+noButton.addEventListener(
+    "mouseenter",
+    moveNoButton
+);
+
+
+noButton.addEventListener(
+    "touchstart",
+    event => {
+
+        event.preventDefault();
+
+        moveNoButton();
+
+    },
+    {
+        passive: false
+    }
+);
+
+
+noButton.addEventListener(
+    "click",
+    event => {
+
+        event.preventDefault();
+
+        moveNoButton();
+
+    }
+);
+
+
+/* =========================
+   REPLAY
+========================= */
+
+replayButton.addEventListener(
+    "click",
+    () => {
+
+        noAttempts = 0;
+
+        noButton.textContent =
+            "Obviously 😎";
+
+        noButton.style.transform =
+            "translate(0,0) rotate(0deg)";
+
+        hint.textContent =
+            "Think carefully... 🥋";
+
+        showScreen(1);
+
+    }
+);
+
+
+/* =========================
+   KICK EFFECT
+========================= */
+
+function createKick() {
+
+    const kick =
+        document.createElement("div");
+
+    kick.className = "kick";
+
+    kick.textContent = "🥋";
+
+    document.body.appendChild(kick);
+
+    setTimeout(
+        () => {
+            kick.remove();
+        },
+        1300
+    );
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti() {
+
+    const items = [
+        "❤️",
+        "💖",
+        "🥋",
+        "⭐",
+        "✨",
+        "🎉",
+        "💫",
+        "🏆",
+        "💕"
+    ];
+
+    for (
+        let i = 0;
+        i < 120;
+        i++
+    ) {
+
+        const piece =
+            document.createElement("div");
+
+        piece.className =
+            "confetti";
+
+        piece.textContent =
+            items[
+                Math.floor(
+                    Math.random() *
+                    items.length
+                )
+            ];
+
+        piece.style.left =
+            `${Math.random() * 100}vw`;
+
+        piece.style.fontSize =
+            `${10 + Math.random() * 18}px`;
+
+        piece.style.animationDuration =
+            `${2.5 + Math.random() * 3.5}s`;
+
+        piece.style.animationDelay =
+            `${Math.random() * 1.2}s`;
+
+        document.body.appendChild(piece);
+
+        setTimeout(
+            () => {
+                piece.remove();
+            },
+            7000
+        );
+
+    }
+}
+
+
+/* =========================
+   BURST
+========================= */
+
+function createBurst() {
+
+    const emojis = [
+        "❤️",
+        "🥋",
+        "⭐",
+        "✨",
+        "🎉",
+        "💖",
+        "🏆",
+        "💫",
+        "❤️",
+        "🥋"
+    ];
+
+    emojis.forEach(
+        (emoji,index) => {
+
+            const element =
+                document.createElement("div");
+
+            element.className =
+                "burst";
+
+            element.textContent =
+                emoji;
+
+            const angle =
+                (Math.PI * 2 / emojis.length)
+                * index;
+
+            const distance =
+                170 +
+                Math.random() * 170;
+
+            element.style.setProperty(
+                "--x",
+                `${Math.cos(angle) * distance}px`
+            );
+
+            element.style.setProperty(
+                "--y",
+                `${Math.sin(angle) * distance}px`
+            );
+
+            document.body.appendChild(
+                element
+            );
+
+            setTimeout(
+                () => {
+                    element.remove();
+                },
+                1500
+            );
+
+        }
+    );
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHearts() {
+
+    const hearts = [
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "💓"
+    ];
+
+    for (
+        let i = 0;
+        i < 30;
+        i++
+    ) {
+
+        const heart =
+            document.createElement("div");
+
+        heart.className =
+            "heart";
+
+        heart.textContent =
+            hearts[
+                Math.floor(
+                    Math.random() *
+                    hearts.length
+                )
+            ];
+
+        heart.style.left =
+            `${Math.random() * 100}vw`;
+
+        heart.style.fontSize =
+            `${12 + Math.random() * 25}px`;
+
+        heart.style.animationDuration =
+            `${4 + Math.random() * 5}s`;
+
+        heart.style.animationDelay =
+            `${Math.random() * 3}s`;
+
+        document.body.appendChild(
+            heart
+        );
+
+        setTimeout(
+            () => {
+                heart.remove();
+            },
+            9000
+        );
+
+    }
+}
+
+
+/* =========================
+   AUDIO
+========================= */
+
+function getAudioContext() {
+
+    if (!audioContext) {
+
+        const AudioContext =
+            window.AudioContext ||
+            window.webkitAudioContext;
+
+        if (!AudioContext) {
+            return null;
+        }
+
+        audioContext =
+            new AudioContext();
+    }
+
+    if (
+        audioContext.state ===
+        "suspended"
+    ) {
+        audioContext.resume();
+    }
+
+    return audioContext;
+}
+
+
+function playTone(
+    frequency,
+    duration,
+    type = "sine"
+) {
+
+    const audio =
+        getAudioContext();
+
+    if (!audio) {
+        return;
+    }
+
+    const oscillator =
+        audio.createOscillator();
+
+    const gain =
+        audio.createGain();
+
+    oscillator.type =
+        type;
+
+    oscillator.frequency.value =
+        frequency;
+
+    gain.gain.setValueAtTime(
+        0,
+        audio.currentTime
+    );
+
+    gain.gain.linearRampToValueAtTime(
+        .12,
+        audio.currentTime + .03
+    );
+
+    gain.gain.exponentialRampToValueAtTime(
+        .001,
+        audio.currentTime + duration
+    );
+
+    oscillator.connect(gain);
+
+    gain.connect(
+        audio.destination
+    );
+
+    oscillator.start();
+
+    oscillator.stop(
+        audio.currentTime +
+        duration
+    );
+}
+
+
+/* =========================
+   BACKGROUND MUSIC
+========================= */
+
+function startMusic() {
+
+    if (musicTimer) {
+        return;
+    }
+
+    const melody = [
+        261.63,
+        329.63,
+        392.00,
+        329.63,
+        293.66,
+        349.23,
+        440.00,
+        349.23
+    ];
+
+    let index = 0;
+
+    musicTimer =
+        setInterval(
+            () => {
+
+                if (!musicOn) {
+                    return;
+                }
+
+                playTone(
+                    melody[index],
+                    .45,
+                    "sine"
+                );
+
+                index =
+                    (index + 1)
+                    % melody.length;
+
+            },
+            600
+        );
+}
+
+
+function stopMusic() {
+
+    if (musicTimer) {
+
+        clearInterval(
+            musicTimer
+        );
+
+        musicTimer = null;
+    }
+}
+
+
+musicButton.addEventListener(
+    "click",
+    () => {
+
+        musicOn =
+            !musicOn;
+
+        musicButton.textContent =
+            musicOn
+                ? "♫"
+                : "♪";
+
+        if (musicOn) {
+
+            getAudioContext();
+
+            startMusic();
+
+            playTone(
+                523.25,
+                .4
+            );
+
+        } else {
+
+            stopMusic();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   CELEBRATION SOUND
+========================= */
+
+function playCelebration() {
+
+    const notes = [
+        523.25,
+        659.25,
+        783.99,
+        1046.5,
+        1318.5
+    ];
+
+    notes.forEach(
+        (note,index) => {
+
+            setTimeout(
+                () => {
+
+                    playTone(
+                        note,
+                        .5,
+                        "sine"
+                    );
+
+                },
+                index * 130
+            );
+
+        }
+    );
+}
+
+
+/* =========================
+   KEYBOARD
+========================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key !==
+            "Enter"
+        ) {
+            return;
+        }
+
+        if (
+            !screen1.classList.contains(
+                "hidden"
+            )
+        ) {
+
+            startButton.click();
+
+        } else if (
+            !screen2.classList.contains(
+                "hidden"
+            )
+        ) {
+
+            yesButton.click();
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
